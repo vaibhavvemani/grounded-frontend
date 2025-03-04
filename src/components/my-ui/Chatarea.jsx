@@ -14,13 +14,13 @@ export default function Chatarea( {url, query} ) {
         headers: {
           "Content-type": "application/json",
         },
-        body: {
+        body: JSON.stringify({
           url: url,
           query: query,
           session_id: "test",
-        }
+        }),
       });
-      data = await response.json();
+      const data = await response.json();
       console.log(data);
       setChatreply(data);
     } catch(error) {
@@ -40,7 +40,7 @@ export default function Chatarea( {url, query} ) {
 
   return (
     <div className="w-[60%] h-[80%] p-5 border-[2px] border-black">
-      <h1>Chat with Assistant</h1>
+      <p>{chatreply}</p>
     </div>
   )
 }
