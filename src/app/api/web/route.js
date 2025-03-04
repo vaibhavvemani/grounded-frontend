@@ -17,9 +17,9 @@ export async function POST( req ) {
       body: JSON.stringify({url, question, session_id})
     })
 
-    const chatreply = await response.json();
+    const chatreply = await response.text();
 
-    return NextResponse.json(chatreply);
+    return NextResponse.json({message: chatreply});
   } catch (error) {
     console.log(error);
 
