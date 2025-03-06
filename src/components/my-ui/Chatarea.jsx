@@ -23,7 +23,7 @@ export default function Chatarea( {url, query} ) {
         body: JSON.stringify({
           url: url,
           query: query,
-          session_id: "test",
+          session_id: url,
         }),
       });
       const data = await response.json();
