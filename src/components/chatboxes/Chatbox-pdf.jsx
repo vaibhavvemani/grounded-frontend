@@ -19,16 +19,13 @@ export default function Chatbox() {
       {sender: "user", message: query}
     ])
 
-    formData = new FormData();
+    let formData = new FormData();
     formData.append("file", file);
     formData.append("question", query)
 
     try {
       const response = await fetch("/api/pdf", {
         method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
         body: formData
       });
 

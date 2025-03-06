@@ -1,4 +1,4 @@
-import Chatbox from "@/components/my-ui/Chatbox"
+import Chatbox from "@/components/chatboxes/Chatbox-pdf";
 
 export default function Webpage() {
   return (
