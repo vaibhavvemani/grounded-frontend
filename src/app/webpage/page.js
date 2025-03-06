@@ -1,4 +1,4 @@
-import Chatbox from "@/components/web/Chatbox-web"
+import Chatbox from "@/components/chatboxes/Chatbox-web"
 
 export default function Webpage() {
   return (

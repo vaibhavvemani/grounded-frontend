@@ -73,8 +73,8 @@ export default function Chatbox() {
             key={index}
             className={`p-3 rounded-lg max-w-xl mb-3 ${
               message.sender === "user" 
-              ? "bg-white text-black ml-auto"
-              : "bg-black text-white mr-auto"
+              ? "bg-[#2A9D8F] text-black ml-auto"
+              : "bg-[#A7C957] text-gray-800 mr-auto"
             }`}>
               {message.message}
           </div>
